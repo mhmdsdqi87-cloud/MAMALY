@@ -405,6 +405,55 @@
   .reveal{opacity:0;transform:translateY(46px);transition:all .9s cubic-bezier(.2,.7,.3,1);transition-delay:var(--d,0s)}
   .reveal.show{opacity:1;transform:none}
   @media(max-width:820px){.about,.contact-wrap{grid-template-columns:1fr}section{padding:70px 20px}.stats{grid-template-columns:repeat(2,1fr)}}
+    /* ===== 🎧 اسپاتی‌فای ===== */
+  .sp-eq{display:flex;justify-content:center;gap:5px;align-items:flex-end;height:36px;margin-bottom:20px}
+  .sp-eq i{width:7px;border-radius:3px;background:linear-gradient(180deg,#1ed760,#1db954);animation:eq 1s ease-in-out infinite alternate}
+  @keyframes eq{from{height:8px;opacity:.6}to{height:34px;opacity:1}}
+  .sp-wrap{max-width:720px;margin:auto;position:relative;z-index:2}
+  .sp-player{background:var(--card);border:1px solid rgba(30,215,96,.4);border-radius:22px;padding:14px;
+    box-shadow:0 0 50px rgba(30,215,96,.16),var(--shadow)}
+  .sp-player iframe{display:block;border-radius:14px}
+  .sp-links{display:flex;justify-content:center;gap:10px;margin-top:18px;flex-wrap:wrap}
+  .sp-btn{display:inline-block;background:linear-gradient(135deg,#1db954,#1ed760);color:#06130a;
+    padding:11px 26px;border-radius:99px;font-weight:900;font-size:.9rem;transition:.3s}
+  .sp-btn:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(30,215,96,.35)}
+
+  /* ===== † کروم هارتز ===== */
+  .ch{position:relative;background:#000;overflow:hidden;border-block:1px solid rgba(226,232,240,.15)}
+  .ch::before{content:'';position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(640px 300px at 50% -10%,rgba(226,232,240,.15),transparent 62%),
+               radial-gradient(400px 260px at 90% 100%,rgba(148,163,184,.08),transparent 60%)}
+  .ch-cross{position:absolute;z-index:1;pointer-events:none;color:#e2e8f0;opacity:.13;
+    font-size:clamp(2.6rem,8vw,5.5rem);animation:chFloat 7s ease-in-out infinite alternate}
+  @keyframes chFloat{to{transform:translateY(-28px) rotate(16deg)}}
+  .ch .sec-tag{color:#cbd5e1}
+  .ch-title{display:inline-block;font-family:"Lalezar";font-size:clamp(2.2rem,7vw,4rem);
+    background:linear-gradient(180deg,#ffffff 0%,#94a3b8 30%,#f8fafc 48%,#475569 72%,#e2e8f0 100%);
+    background-size:100% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:chrome 4s ease-in-out infinite alternate;
+    filter:drop-shadow(0 4px 18px rgba(148,163,184,.5))}
+  @keyframes chrome{to{background-position:0 100%}}
+  .ch-sub{color:#94a3b8;font-weight:900;letter-spacing:6px;font-size:.85rem;margin-top:4px}
+  .ch-marquee{max-width:860px;margin:34px auto 50px;border-block:1px solid rgba(226,232,240,.18);
+    overflow:hidden;direction:ltr;position:relative;z-index:2;background:rgba(226,232,240,.04)}
+  .ch-track{display:flex;gap:48px;width:max-content;animation:scrollX 20s linear infinite;padding:13px 0}
+  .ch-track span{font-family:"Lalezar";font-size:1.35rem;white-space:nowrap;color:transparent;
+    -webkit-text-stroke:1.1px #e2e8f0}
+  .ch-track span:nth-child(3n+2){color:#fff;-webkit-text-stroke:0;
+    filter:drop-shadow(0 0 10px rgba(226,232,240,.6))}
+  .ch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:20px;position:relative;z-index:2}
+  .ch-card{position:relative;overflow:hidden;background:linear-gradient(160deg,#0c0c0e,#040404);
+    border:1px solid rgba(226,232,240,.2);border-radius:18px;padding:32px 22px;text-align:center;transition:.35s}
+  .ch-card::after{content:'';position:absolute;top:0;right:-75%;width:45%;height:100%;
+    background:linear-gradient(105deg,transparent,rgba(255,255,255,.22),transparent);
+    transform:skewX(-18deg);transition:right .7s}
+  .ch-card:hover{transform:translateY(-8px);border-color:#e2e8f0;
+    box-shadow:0 16px 44px rgba(0,0,0,.75),0 0 36px -8px rgba(226,232,240,.55)}
+  .ch-card:hover::after{right:135%}
+  .ch-ico{font-size:2.7rem;margin-bottom:12px;filter:drop-shadow(0 0 16px rgba(226,232,240,.6))}
+  .ch-card h3{font-family:"Lalezar";font-size:1.35rem;margin-bottom:6px;
+    background:linear-gradient(180deg,#fff,#94a3b8);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .ch-card p{color:var(--muted);font-size:.86rem}
 </style>
 </head>
 <body>
@@ -732,6 +781,63 @@
     <p class="g-note reveal">🦸 مای هرو آکادمیا © کوهی هوریکوشی / Shueisha / استودیو Bones — تمام حقوق برای صاحبان اثر محفوظ است.</p>
   </div>
 </section>
+<!-- 🎧 اسپاتی‌فای — پلی‌لیست خود مملی -->
+<section id="spotify">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">— 🎧 موزیک —</div>
+      <h2 class="lz">پلی‌لیست من در اسپاتی‌فای</h2>
+      <p>زنده و مستقیم — هر آهنگی که به پلی‌لیستم اضافه کنم، همین‌جا هم میاد! 🟢</p>
+    </div>
+    <div class="sp-wrap reveal">
+      <div class="sp-eq">
+        <i style="animation-delay:0s"></i><i style="animation-delay:.15s"></i>
+        <i style="animation-delay:.3s"></i><i style="animation-delay:.1s"></i>
+        <i style="animation-delay:.25s"></i><i style="animation-delay:.05s"></i>
+        <i style="animation-delay:.2s"></i><i style="animation-delay:.35s"></i>
+        <i style="animation-delay:.12s"></i>
+      </div>
+      <div class="sp-player">
+        <iframe title="پلی‌لیست اسپاتی‌فای مملی" style="border-radius:14px"
+          src="https://open.spotify.com/embed/playlist/1WInNM1Iomfp6wMdrXoBBv?utm_source=generator&theme=0"
+          width="100%" height="480" frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </div>
+      <div class="sp-links">
+        <a class="sp-btn" href="https://open.spotify.com/playlist/1WInNM1Iomfp6wMdrXoBBv" target="_blank">🎧 باز کردن توی اسپاتی‌فای</a>
+  </div>
+</section>
+
+<!-- † کروم هارتز -->
+<section id="ch" class="ch">
+  <span class="ch-cross" style="top:10%;right:6%">†</span>
+  <span class="ch-cross" style="top:55%;left:4%;animation-delay:-2s">†</span>
+  <span class="ch-cross" style="top:26%;left:14%;animation-delay:-4s">†</span>
+  <span class="ch-cross" style="top:72%;right:12%;animation-delay:-1s">†</span>
+  <span class="ch-cross" style="top:40%;right:38%;animation-delay:-5s">†</span>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-tag">— † استایل —</div>
+      <div><span class="ch-title">CHROME HEARTS</span></div>
+    </div>
+    <div class="ch-marquee reveal">
+      <div class="ch-track">
+        <span>† CHROME HEARTS</span><span>† کروم هارتز</span><span>† مملی استایل</span>
+        <span>† CHROME HEARTS</span><span>† کروم هارتز</span><span>† مملی استایل</span>
+        <span>† CHROME HEARTS</span><span>† کروم هارتز</span><span>† مملی استایل</span>
+        <span>† CHROME HEARTS</span><span>† کروم هارتز</span><span>† مملی استایل</span>
+      </div>
+    </div>
+    <div class="ch-grid">
+      <div class="ch-card reveal"><div class="ch-ico">✝</div><h3>سیاهِ مطلق</h3><p>زمینه‌ی تاریکِ خالص — شیک‌ترین بوم برای هر استایلی، مثل هوگوارتز تو شب.</p></div>
+      <div class="ch-card reveal" style="--d:.08s"><div class="ch-ico">🗡️</div><h3>کرومِ نقره‌ای</h3><p>برق فلزی و جزئیات صلیبی — ماوسو ببر رو کارتا تا مثل کروم برق بزنه!</p></div>
+      <div class="ch-card reveal" style="--d:.16s"><div class="ch-ico">🧲</div><h3>جزئیات گوتیک</h3><p>حکاکی‌های ریز و تایپوگرافی سنگین — همونی که این بخشو خاص کرده.</p></div>
+      <div class="ch-card reveal" style="--d:.24s"><div class="ch-ico">🐎</div><h3>نعل اسب</h3><p>نماد شانس و استایل — از خیابونای لس‌آنجلس تا ارومیه! 🌆</p></div>
+    </div>
+    <p class="g-note reveal">† الهام‌گرفته از استایل برند Chrome Hearts — تمام حقوق برند برای صاحبانش محفوظ است.</p>
+  </div>
+</section>
 
 <!-- روسی -->
 <section id="russian">
@@ -860,6 +966,7 @@
       <div class="pg-item reveal" style="--d:.16s" data-cap="#SWAG"><img loading="lazy" src="5803035089812786839.jpg" alt="عکس من ۳"><div class="p-cap">#SWAG</div></div>
       <div class="pg-item reveal" data-cap="#SWAG"><img loading="lazy" src="zxd.jpg" alt="عکس من ۴"><div class="p-cap">#SWAG</div></div>
       <div class="pg-item reveal" style="--d:.08s" data-cap="#SWAG"><img loading="lazy" src="ht.jpg" alt="عکس من ۵"><div class="p-cap">#SWAG</div></div>
+       <div class="pg-item reveal" style="--d:.08s" data-cap="#SWAG"><img loading="lazy" src="02cf1fd7-369f-4e68-8fd7-2cb4bca0c66d.jpg" alt="عکس من ۵"><div class="p-cap">#SWAG</div></div>
     </div>
   </div>
 </section>
